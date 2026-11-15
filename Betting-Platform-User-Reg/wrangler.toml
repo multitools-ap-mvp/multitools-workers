@@ -1,0 +1,26 @@
+name = "apex-community-auth"
+main = "worker/src/index.js"
+compatibility_date = "2026-11-15"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+APP_ORIGIN = "http://localhost:8788"
+API_ORIGIN = "http://localhost:8787"
+SESSION_COOKIE = "apex_session"
+COOKIE_SECURE = "false"
+BREVO_FROM_EMAIL = "info@apexmultitools.se"
+BREVO_FROM_NAME = "Apex Multi Tools Community"
+
+[[hyperdrive]]
+binding = "HYPERDRIVE"
+id = "REPLACE_WITH_HYPERDRIVE_ID"
+
+# Set secrets with `npx wrangler secret put SECRET_NAME`.
+# Required:
+# DATABASE_URL is supplied through Hyperdrive.
+# JWT_SECRET
+# BREVO_API_KEY
+# GOOGLE_CLIENT_ID / GOOGLE_CLIENT_SECRET
+# TWITCH_CLIENT_ID / TWITCH_CLIENT_SECRET
+# APPLE_CLIENT_ID / APPLE_TEAM_ID / APPLE_KEY_ID / APPLE_PRIVATE_KEY
+# APPLE_REDIRECT_URI
